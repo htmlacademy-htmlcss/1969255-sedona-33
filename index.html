@@ -152,38 +152,39 @@
         </section>
       </footer>
 
-      <div class="modal">
+      <div class="booking-modal">
 
         <h2 class="visually-hidden">Модальное окно для поиска гостиниц в Седоне</h2>
         <p class="modal-title">Поиск гостиницы в Cедоне</p>
-        <a class="modal-close" href="#"><span class="visually-hidden">Закрыть</span></a>
-        <label class="input-label">
-          Дата заезда:
-          <input type="date" name="entry-date">
-        </label>
-        <p class="error-message">Мы не можем отправить вас в прошлое.</p>
-        <label class="input-label">
-          Дата выезда:
-          <input type="date" name="departure-date">
-        </label>
-        <p class="info-message">На эти даты есть свободные номера. Пока есть.</p>
+        <button class="close-modal" type="button"><span class="visually-hidden">Закрыть</span></button>
+        <form  class="booking-form" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="input-label">
+            Дата заезда:
+            <input type="text" name="entry-date" placeholder="Укажите дату" value="27 апреля 2020" required>
+          </label>
+          <p class="error-message">Мы не можем отправить вас в прошлое.</p>
+          <label class="input-label">
+            Дата выезда:
+            <input type="text" name="departure-date" placeholder="Укажите дату" value="1 сентября 2021" required>
+          </label>
+          <p class="info-message">На эти даты есть свободные номера. Пока есть.</p>
 
-        <label class="input-label" for="adult">Взрослые: </label>
-        <button class="minus" type="button" name="minus-button-adult">-</button>
-        <input type="number" name="adult" id="adult" min="0">
-        <button class="plus" type="button" name="plus-button-adult">+</button>
+          <label class="input-label" for="adult">Взрослые: </label>
+          <button class="minus" type="button" name="minus-button-adult">-</button>
+          <input type="number" name="adult" id="adult" min="0" required>
+          <button class="plus" type="button" name="plus-button-adult">+</button>
 
-        <label class="input-label" for="children"> Дети: </label>
-          <button class="info-button" type="button" name="info-button">i</button>
-          <div class="info-small-window">
-            Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
-          </div>
-        <button class="minus" type="button" name="minus-button-children">-</button>
-        <input type="number" name="children" id="children" min="0">
-        <button class="plus" type="button" name="plus-button-children">+</button>
+          <label class="input-label" for="children"> Дети: </label>
+            <button class="info-button" type="button" name="info-button">i</button>
+            <div class="info-small-window">
+              Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+            </div>
+          <button class="minus" type="button" name="minus-button-children">-</button>
+          <input type="number" name="children" id="children" min="0" required>
+          <button class="plus" type="button" name="plus-button-children">+</button>
 
-        <a class="light-blue-button"  href="#">Найти</a>
-
+          <button class="light-blue-button" type="submit">Найти</button>
+        </form>
       </div>
     </body>
   </html>

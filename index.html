@@ -8,7 +8,7 @@
     <body>
       <header class="page-header">
         <nav class="navigation">
-          <a class="logo" href="">
+          <a class="logo" href="#">
             <img class="page-header-logo" src="images/logo.svg" width="139" height="70" alt="Логотип сайта города Седона">
           </a>
           <ul class="navigation-list">
@@ -34,24 +34,26 @@
               </a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link brown-button" href="#">Хочу сюда!</a>
+              <a class="navigation-link brown-button want-button" href="#">Хочу сюда!</a>
             </li>
           </ul>
         </nav>
       </header>
       <main class="main-index">
-        <h1 class="visually-hidden">Сайт о небольшом, но интересном городке - Седона</h1>
-        <img class="welcome-image" src="images/welcome.svg" width="458" height="352" alt="Добро пожаловать в великолепную Седону, потому что Большой Каньон отстой">
+        <div class="main-background">
+          <h1 class="visually-hidden">Сайт о небольшом, но интересном городке - Седона</h1>
+          <img class="welcome-image" src="images/welcome.svg" width="458" height="352" alt="Добро пожаловать в великолепную Седону, потому что Большой Каньон отстой">
+        </div>
         <section class="advantages">
           <h2 class="visually-hidden">Преимущества</h2>
-          <p class="description-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+          <p class="description-title section-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
           <p class="description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
           <ul class="advantage-list">
             <li class="advantage-with-image">
-              <div class="advantage-item cold-light-background white-text">
-                <h3 class="advantage-title">Настоящий городок</h3>
-                <p class="advantage-number">— №1 —</p>
-                <p class="advantage-description">Седона — не аттракцион для туристов, там течёт
+              <div class="advantage-item cold-light-background">
+                <h3 class="advantage-title white-text">Настоящий городок</h3>
+                <p class="advantage-number white-text">— №1 —</p>
+                <p class="advantage-description white-text">Седона — не аттракцион для туристов, там течёт
                 своя жизнь</p>
               </div>
               <div class="advantage-image">
@@ -77,10 +79,10 @@
                 <img class="advantage-img" src="images/devil-bridge.jpg" width="800" height="384" alt="Мост дьявола">
               </div>
               <div class="advantage-item cold-light-background white-text">
-                <h3 class="advantage-title">Там есть
+                <h3 class="advantage-title  white-text">Там есть
                   мост дьявола</h3>
-                  <p class="advantage-number">— №2 —</p>
-                <p class="advantage-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+                  <p class="advantage-number white-text">— №2 —</p>
+                <p class="advantage-description white-text">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
             </li>
             <li class="advantage-item cold-light-12-background">
@@ -104,17 +106,17 @@
 
         <section class="hotel-search">
           <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
-          <p class="hotel-search-title">Заинтересовались?</p>
+          <p class="hotel-search-title section-title">Заинтересовались?</p>
           <p class="description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-            <a class="brown-button" href="#">Поиск гостиницы в Седоне</a>
+            <a class="brown-button search-brown-button" href="#">Поиск гостиницы в Седоне</a>
         </section>
 
-        <section class="subscribe white-text subscribe-background">
+        <section class="subscribe subscribe-background">
           <h2 class="visually-hidden">Форма рассылки</h2>
-          <p class="subscribe-title">Подпишитесь на рассылку</p>
-          <p class="descriprion">Только полезная информация и никакого спама, честное бойскаутское!</p>
+          <p class="subscribe-title section-title white-text">Подпишитесь на рассылку</p>
+          <p class="description white-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input type="email" placeholder="Ваш e-mail" name="email" required>
+            <input class="email-input" type="email" placeholder="Ваш e-mail" name="email" required>
             <button class="subscribe-button light-blue-button" type="submit">Подписаться</button>
           </form>
         </section>
@@ -156,23 +158,23 @@
       <div class="booking-modal">
 
         <h2 class="visually-hidden">Модальное окно для поиска гостиниц в Седоне</h2>
-        <p class="modal-title">Поиск гостиницы в Cедоне</p>
+        <p class="modal-title section-title">Поиск гостиницы в Cедоне</p>
         <button class="close-modal" type="button"><span class="visually-hidden">Закрыть</span></button>
         <form  class="booking-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="input-label">
             Дата заезда:
-            <input type="text" name="entry-date" placeholder="Укажите дату" value="27 апреля 2020" required>
+            <input class="date-input" type="text" name="entry-date" placeholder="Укажите дату" value="27 апреля 2020" required>
           </label>
           <p class="error-message">Мы не можем отправить вас в прошлое.</p>
           <label class="input-label">
             Дата выезда:
-            <input type="text" name="departure-date" placeholder="Укажите дату" value="1 сентября 2021" required>
+            <input class="date-input" type="text" name="departure-date" placeholder="Укажите дату" value="1 сентября 2021" required>
           </label>
           <p class="info-message">На эти даты есть свободные номера. Пока есть.</p>
 
           <label class="input-label" for="adult">Взрослые: </label>
           <button class="minus" type="button" name="minus-button-adult">-</button>
-          <input type="number" name="adult" id="adult" min="0" required>
+          <input class="customers-number" type="number" name="adult" value="2" id="adult" min="0" required>
           <button class="plus" type="button" name="plus-button-adult">+</button>
 
           <label class="input-label" for="children"> Дети: </label>
@@ -181,10 +183,10 @@
               Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
             </div>
           <button class="minus" type="button" name="minus-button-children">-</button>
-          <input type="number" name="children" id="children" min="0" required>
+          <input class="customers-number" type="number" name="children" value="1" id="children" min="0" required>
           <button class="plus" type="button" name="plus-button-children">+</button>
 
-          <button class="light-blue-button" type="submit">Найти</button>
+          <button class=" search-blue-button light-blue-button" type="submit">Найти</button>
         </form>
       </div>
     </body>

@@ -57,10 +57,10 @@ body{
 
 .main-background{
   height: 485px;
+  background: rgba(131, 179, 211, 0.2);
   background-image: url("/images/index-background.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
-
 }
 
 .welcome-image{
@@ -199,6 +199,7 @@ border-radius: 30px;
 /* hotels catalog */
 
 .inner-catalog-image{
+  background-color: #83B3D3;
   background-image: url("/images/catalog-background.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;

@@ -38,6 +38,7 @@ body{
 
  /* Коричневая кнопка*/
 .brown-button{
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   text-align: center;
   background: #756257;
@@ -49,6 +50,7 @@ body{
  }
 
  .want-button{
+   font-family: "PT Sans", sans-serif;
    font-size: 16px;
    line-height: 20px;
  }
@@ -78,7 +80,7 @@ body{
   text-transform: uppercase;
 }
 
-.description{
+.advantages-description{
   font-size: 22px;
   line-height: 36px;
   text-align: center;
@@ -99,8 +101,16 @@ body{
   color: #000000;
 }
 
+.advantage-title-white{
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
 .cold-light-background{
   background-color: #83B3D3;
+  color: #ffffff;
 }
 
 .cold-light-12-background{
@@ -110,27 +120,43 @@ body{
   background: rgba(131, 179, 211, 0.2);
 }
 
-.white-text{
-  color: #ffffff;
-  text-decoration: none;
+.hotel-search-description{
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
 }
+
 
 .subscribe-background{
   background-image: url("/images/subscribe-background.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-color: #83B3D3;
+  color: #ffffff;
 }
+
+.subscribe-white-title{
+  color: #ffffff;
+}
+
+.subscribe-description{
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+
 .subscribe-form{
   text-align: center;
 }
 .email-input{
-font-size: 18px;
-line-height: 26px;
-color: #000000;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
 }
 
 .search-brown-button{
+  font-family: "PT Sans", sans-serif;
   font-size: 20px;
   line-height: 36px;
 }
@@ -172,6 +198,7 @@ border-radius: 30px;
   border-radius: 10px;
 }
 .date-input{
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 40px;
@@ -188,6 +215,7 @@ border-radius: 30px;
 }
 
 .customers-number{
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 40px;
@@ -199,6 +227,7 @@ border-radius: 30px;
 /* hotels catalog */
 
 .inner-catalog-image{
+  color: #ffffff;
   background-color: #83B3D3;
   background-image: url("/images/catalog-background.jpg");
   background-repeat: no-repeat;
@@ -206,6 +235,7 @@ border-radius: 30px;
 }
 /* Голубая кнопка */
 .light-blue-button{
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   color: #ffffff;
   background: #83B3D3;
@@ -215,8 +245,12 @@ border-radius: 30px;
 }
 
 .reset-button{
-background: none;
-border: none;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 23px;
+  color: #ffffff;
+  background: none;
+  border: none;
 }
 
 .inner-header-title{
@@ -226,8 +260,11 @@ border: none;
 }
 
 .breadcrumbs-link{
+  font-family: "PT Sans", sans-serif;
+  color: #ffffff;
   font-size: 16px;
   line-height: 21px;
+  text-decoration: none;
 }
 
 .hotels-filter-title{
@@ -251,10 +288,13 @@ line-height: 21px;
   line-height: 39px;
 }
 
-.sort-select-option{
+.sort-select{
+  font-family: "PT Sans", sans-serif;
+  color: #333333;
   font-size: 18px;
   line-height: 23px;
 }
+
 
 /* hotels cards */
 
@@ -277,28 +317,33 @@ line-height: 21px;
 }
 
 .about-button{
-font-size: 16px;
-line-height: 21px;
+  font-size: 16px;
+  line-height: 21px;
 }
+
 .favourites-button{
   font-size: 16px;
   line-height: 21px;
+  text-decoration: none;
   }
 
 .hotel-card-rating{
-font-size: 16px;
-line-height: 21px;
-text-transform: uppercase;
-background-color: #f2f2f2;
+  font-size: 16px;
+  line-height: 21px;
+  text-transform: uppercase;
+  background-color: #f2f2f2;
 }
 /* Зеленая кнопка */
 .green-button{
+  color: #ffffff;
   font-weight: 700;
   background: #7db54f;
   border-radius: 4px;
   border: none;
   text-transform: uppercase;
+  text-decoration: none;
 }
+
 .divider{
   border-top: 1px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6;
@@ -322,10 +367,9 @@ background-color: #f2f2f2;
 }
 
 .pagination-link{
-  font-weight: 700;
   font-size: 20px;
   line-height: 26px;
-  text-transform: uppercase;
+  text-decoration: none;
 }
 
 .display-quantity{
@@ -333,7 +377,11 @@ background-color: #f2f2f2;
   line-height: 23px;
 }
 
-.quantity-option{
+.quantity-select{
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 23px;
+  color: #333333;
 }
+
+

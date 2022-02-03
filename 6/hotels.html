@@ -44,15 +44,15 @@
     <main class="main-inner">
       <div class="inner-catalog-image">
         <header class="inner-header">
-          <h1 class="inner-header-title white-text">Гостиницы Седоны</h1>
+          <h1 class="inner-header-title">Гостиницы Седоны</h1>
           <ul class="breadcrumbs">
             <li class="breadcrumbs-item">
-              <a href="index.html" class="breadcrumsbs-link">
+              <a href="index.html" class="breadcrumbs-link">
                 <span class="visually-hidden">Главная страница</span>
               </a>
             </li>
             <li class="breadcrumbs-item">
-              <a class="breadcrumsbs-link white-text">Гостиницы</a>
+              <a class="breadcrumbs-link">Гостиницы</a>
             </li>
           </ul>
         </header>
@@ -61,53 +61,53 @@
           <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
           <form  class="hotels-filters" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset class="hotels-filter-group">
-              <legend class="hotels-filter-title white-text">Инфраструктура:</legend>
-              <label class="checkbox white-text">
+              <legend class="hotels-filter-title">Инфраструктура:</legend>
+              <label class="checkbox">
                 <input class="checkbox-input " type="checkbox" name="pool" checked>
                 Бассейн
               </label>
-              <label class="checkbox white-text">
+              <label class="checkbox">
                 <input class="checkbox-input" type="checkbox" name="parking" checked>
                 Парковка
               </label>
-              <label class="checkbox white-text">
+              <label class="checkbox">
                 <input class="checkbox-input" type="checkbox" name="wi-fi">
                 Wi-Fi
               </label>
             </fieldset>
             <fieldset class="hotels-filter-group">
-              <legend class="hotels-filter-title white-text">Тип жилья:</legend>
+              <legend class="hotels-filter-title">Тип жилья:</legend>
               <ul class="hotels-filter-list">
                 <li class="hotels-filter-item">
-                  <label class="radio white-text">
+                  <label class="radio">
                     <input class="radio-input" type="radio" name="hotels-group" value="hotel" checked>
                     Гостиница
                   </label>
                 </li>
                 <li class="hotels-filter-item">
-                  <label class="radio white-text">
+                  <label class="radio">
                     <input class="radio-input" type="radio" name="hotels-group" value="motel">
                     Мотель
                   </label>
                 </li>
                 <li class="hotels-filter-item">
-                  <label class="radio white-text">
+                  <label class="radio">
                     <input class="radio-input" type="radio" name="hotels-group" value="apartments">
                     Апартаменты
                   </label>
                 </li>
               </ul>
             </fieldset>
-            <button class="light-blue-button white-text submit-button" type="submit">Применить</button>
-            <button class="reset-button white-text" type="reset">Сбросить</button>
+            <button class="light-blue-button submit-button" type="submit">Применить</button>
+            <button class="reset-button" type="reset">Сбросить</button>
           </form>
         </div>
         <p class="sort-title section-title">Найдено гостиниц: <span class="sort-quantity">38</span></p>
 
         <select class="sort-select" aria-label="Сортировка">
-          <option class="sort-select-option" value="cheap">Сначала дешевые</option>
-          <option  class="sort-select-option" value="expensive">Сначала дорогие</option>
-          <option class="sort-select-option" value="popular">Сначала популярные</option>
+          <option value="cheap">Сначала дешёвые</option>
+          <option value="expensive">Сначала дорогие</option>
+          <option value="popular">Сначала популярные</option>
         </select>
 
         <a class="display-mode-button" href="#">
@@ -192,38 +192,38 @@
             <a class="pagination-link pagination-current ">1</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link light-blue-button white-text" href="#" >2</a>
+            <a class="pagination-link light-blue-button" href="#" >2</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link light-blue-button white-text" href="#" >3</a>
+            <a class="pagination-link light-blue-button" href="#" >3</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link light-blue-button white-text" href="#" >4</a>
+            <a class="pagination-link light-blue-button" href="#" >4</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link light-blue-button white-text" href="#" >...</a>
+            <a class="pagination-link light-blue-button" href="#" >...</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link light-blue-button white-text" href="#" >10</a>
+            <a class="pagination-link light-blue-button" href="#" >10</a>
           </li>
         </ul>
 
         <label class="display-quantity">
           Гостиниц на странице:
           <select class="quantity-select" name="quantity-on-page">
-            <option class="quantity-option" value="4">4</option>
-            <option class="quantity-option" value="6">6</option>
-            <option class="quantity-option" value="9">9</option>
+            <option value="4">4</option>
+            <option value="6">6</option>
+            <option value="9">9</option>
           </select>
         </label>
       </section>
 
       <section class="subscribe">
         <h2 class="visually-hidden">Форма рассылки</h2>
-        <p class="subscribe-title section-title">Подпишитесь на рассылку</p>
-        <p class="description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <p class="section-title">Подпишитесь на рассылку</p>
+        <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-          <input type="email" placeholder="Ваш e-mail" name="email" required>
+          <input class="email-input" type="email" placeholder="Ваш e-mail" name="email" required>
           <button class="subscribe-button light-blue-button white-text" type="submit">Подписаться</button>
         </form>
       </section>

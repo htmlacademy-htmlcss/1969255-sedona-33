@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
-    <div class="body-container">
+    <main class="body-container">
       <header class="page-header">
         <nav class="navigation">
           <a class="navigation-logo" href="index.html">
@@ -25,24 +25,23 @@
           </ul>
           <ul class="navigation-list navigation-user">
             <li class="navigation-item">
-              <a class="navigation-icon" href="#">
+              <a class="navigation-icon navigation-link" href="#">
                 <span class="visually-hidden">Поиск</span>
               </a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-icon" href="#">
+              <a class="navigation-icon navigation-link" href="#">
                 <span class="visually-hidden">Избранное</span>
               </a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link brown-button want-button" href="#">Хочу сюда!</a>
+              <a class="navigation-link brown-button navigation-button" href="#">Хочу сюда!</a>
             </li>
           </ul>
         </nav>
       </header>
 
       <main class="main-container main-inner">
-        <div class="inner-catalog-image">
           <header class="inner-header">
             <h1 class="inner-header-title">Гостиницы Седоны</h1>
             <ul class="breadcrumbs">
@@ -98,28 +97,30 @@
                   </li>
                 </ul>
               </fieldset>
-              <button class="light-blue-button submit-button" type="submit">Применить</button>
-              <button class="reset-button" type="reset">Сбросить</button>
+              <div class="hotels-filter-buttons">
+                <button class="light-blue-button submit-button" type="submit">Применить</button>
+                <button class="reset-button" type="reset">Сбросить</button>
+            </div>
             </form>
-        </div>
-          <p class="sort-title section-title">Найдено гостиниц: <span class="sort-quantity">38</span></p>
+          <div class="sorting-container">
+            <p class="sort-title section-title">Найдено гостиниц: <span class="sort-quantity">38</span></p>
 
-          <select class="sort-select" aria-label="Сортировка">
-            <option value="cheap">Сначала дешёвые</option>
-            <option value="expensive">Сначала дорогие</option>
-            <option value="popular">Сначала популярные</option>
-          </select>
+            <select class="sort-select" aria-label="Сортировка">
+              <option value="cheap">Сначала дешёвые</option>
+              <option value="expensive">Сначала дорогие</option>
+              <option value="popular">Сначала популярные</option>
+            </select>
 
-          <a class="display-mode-button" href="#">
-            <span class="visually-hidden">Показать карточки</span>
-          </a>
-          <a class="display-mode-button" href="#">
-            <span class="visually-hidden">Слайдшоу</span>
-          </a>
-          <a class="display-mode-button" href="#">
-            <span class="visually-hidden">Показать списком</span>
-          </a>
-
+            <a class="display-mode-button" href="#">
+              <span class="visually-hidden">Показать карточки</span>
+            </a>
+            <a class="display-mode-button" href="#">
+              <span class="visually-hidden">Слайдшоу</span>
+            </a>
+            <a class="display-mode-button" href="#">
+              <span class="visually-hidden">Показать списком</span>
+            </a>
+          </div>
           <ul class="hotels-list">
             <li class="hotels-item">
               <a class="hotel-card-image-link" href="#">
@@ -186,41 +187,40 @@
             <button class="light-blue-button pagination-download-button white-text">Загрузить ещё</button>
           </div>
 
+          <div class="pagination-container">
+            <ul class="pagination">
+              <li class="pagination-item">
+                <a class="pagination-link pagination-current ">1</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link light-blue-button" href="#" >2</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link light-blue-button" href="#" >3</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link light-blue-button" href="#" >4</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link light-blue-button" href="#" >...</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link light-blue-button" href="#" >10</a>
+              </li>
+            </ul>
 
-          <ul class="pagination">
-            <li class="pagination-item">
-              <a class="pagination-link pagination-current ">1</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link light-blue-button" href="#" >2</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link light-blue-button" href="#" >3</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link light-blue-button" href="#" >4</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link light-blue-button" href="#" >...</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link light-blue-button" href="#" >10</a>
-            </li>
-          </ul>
-
-          <label class="display-quantity">
-            Гостиниц на странице:
-            <select class="quantity-select" name="quantity-on-page">
-              <option value="4">4</option>
-              <option value="6">6</option>
-              <option value="9">9</option>
-            </select>
-          </label>
+            <label class="display-quantity" for="quantity">Гостиниц на странице:</label>
+              <select class="quantity-select" id="quantity" name="quantity-on-page">
+                <option value="4">4</option>
+                <option value="6">6</option>
+                <option value="9">9</option>
+              </select>
+          </div>
         </section>
 
         <section class="subscribe">
           <h2 class="visually-hidden">Форма рассылки</h2>
-          <p class="section-title">Подпишитесь на рассылку</p>
+          <p class="subscribe-title section-title">Подпишитесь на рассылку</p>
           <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <input class="email-input" type="email" placeholder="Ваш e-mail" name="email" required>

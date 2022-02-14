@@ -308,7 +308,7 @@ padding-right: 240px;
 
 /* Форма рассылки */
 .subscribe-background{
-  background-image: url("/images/subscribe-background.jpg");
+  background-image: url("../images/subscribe-background.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-color: #83B3D3;
@@ -450,7 +450,7 @@ text-align: center;
   margin-right: 70px;
   border-radius: 50%;
   border: none;
-  background-image: url("/images/icons/close.svg");
+  background-image: url("../images/icons/close.svg");
 }
 
 .booking-form{

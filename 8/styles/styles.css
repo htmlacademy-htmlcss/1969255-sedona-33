@@ -26,6 +26,7 @@ html{
 
 }
 body{
+  margin: 0;
   min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -46,6 +47,8 @@ body{
 }
 
 .body-container{
+  display: flex;
+  flex-direction: column;
   width: 1200px;
   margin: 0 auto;
   background-color: #ffffff;
@@ -109,6 +112,10 @@ margin-right: 30px;
  }
 
 .navigation-button{
+  width: 160px;
+  margin-top: 14px;
+  padding-top: 9px;
+  padding-bottom: 8px;
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
   line-height: 20px;
@@ -118,20 +125,21 @@ margin-right: 30px;
 
 .main-container{
 flex-grow: 1;
-padding-top: 51px;;
 }
 
-.main-index{
-  background-image: url("/images/index-background.jpg");
+.main-image-container{
+  background-image: url("../images/index-background.jpg");
+  background-color: #83B3D3;
   background-repeat: no-repeat;
   background-size: 100% auto;
+  padding-top: 51px;
+  padding-bottom: 82px;
 }
 
 .welcome-image{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 82px;
 }
 
 
@@ -158,6 +166,7 @@ padding-right: 240px;
   line-height: 36px;
   text-align: center;
 }
+
 
 /* Advantages */
 
@@ -302,7 +311,7 @@ padding-right: 240px;
 
 /* Форма рассылки */
 .subscribe-background{
-  background-image: url("/images/subscribe-background.jpg");
+  background-image: url("../images/subscribe-background.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-color: #83B3D3;
@@ -417,7 +426,6 @@ text-align: center;
 .booking-modal{
   width: 715px;
   margin: 0;
-  padding: 0.1px;
   margin: 0 auto;
   background-color: #ffffff;
   box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
@@ -431,9 +439,12 @@ text-align: center;
 
 .modal-title{
   width: 499px;
+  height: 68px;
   text-align: start;
+  margin: 0;
   margin-top: 62px;
   margin-left: 68px;
+  margin-bottom: 32px;
 }
 
 .close-modal{
@@ -444,15 +455,21 @@ text-align: center;
   margin-right: 70px;
   border-radius: 50%;
   border: none;
-  background-image: url("/images/icons/close.svg");
+  background-image: url("../images/icons/close.svg");
 }
 
 .booking-form{
   display: flex;
   flex-direction: column;
 }
+
+.input-date-form{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .input-label{
-  display: inline-block;
   width: 155px;
   margin-left: 70px;
   margin-right: 0;
@@ -475,6 +492,7 @@ text-align: center;
 .date-input{
   width: 420px;
   height: 50px;
+  padding: 0;
   margin-left: 0;
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
@@ -484,11 +502,22 @@ text-align: center;
   border: none;
 }
 
+.input-customers-form{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 .info-message{
+  visibility: hidden;
+  margin: 0;
+  padding: 0;
   width: 420px;
-  margin: 0 70px 11px 225px;
+  margin-left: 225px;
+  margin-bottom: 11px;
   font-size: 16px;
-  line-height: 40px;
+  line-height: 29px;
 }
 .error-message{
   color: #ff5757;
@@ -497,6 +526,7 @@ text-align: center;
 .customers-number{
   width: 57px;
   height: 50px;
+  padding: 0;
   background-color: #f2f2f2;
   border: none;
   font-family: "PT Sans", sans-serif;
@@ -506,6 +536,28 @@ text-align: center;
 }
 .input-label-children{
   width: 54px;
+  margin-left: 56px;
+}
+
+.minus{
+  align-self: stretch;
+  width: 38px;
+}
+
+.plus{
+  align-self: stretch;
+  width: 38px;
+}
+
+.info-button{
+  align-self: center;
+  width: 25px;
+  height: 25px;
+  margin-right: 18px;
+  background-color: #83B3D3;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
 }
 
 .search-blue-button{
@@ -525,18 +577,21 @@ text-align: center;
 .main-inner{
   margin: 0;
   padding: 0;
-  background-image: url("/images/catalog-background.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
 }
 
-.inner-header{
-  padding-top: 30px;
+.filters-image-container{
+  background-image: url("../images/catalog-background.jpg");
+  background-color: #83B3D3;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  padding-top: 35px;
+  padding-bottom: 83px;
   color: #ffffff;
 }
 
 .inner-header-title{
   width: 528px;
+  max-height: 68px;
   margin: 0;
   margin-left: 71px;
   margin-right: 601px;
@@ -574,6 +629,7 @@ text-align: center;
 .hotels-filters{
   display: flex;
   color: #ffffff;
+  margin-top: 45px;
 }
 
 .hotels-filter-group{
@@ -582,7 +638,6 @@ text-align: center;
   margin: 0;
   padding: 0;
   width: 200px;
-  margin-top: 45px;
   border: none;
 }
 
@@ -670,14 +725,15 @@ text-align: center;
 
 .sorting-container{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin-top: 44px;
+  margin-left: 71px;
+  margin-right: 72px;
 }
 
 .sort-title{
   margin: 0;
   padding: 0;
-  margin-top: 133px;
-  margin-left: 64px;
   font-size: 30px;
   line-height: 39px;
 }
@@ -685,8 +741,8 @@ text-align: center;
 .sort-select{
   width: 287px;
   height: 48px;
-  margin-top: 127px;
   margin-left: 192px;
+  margin-right: 81px;
   border: 2px solid #E6E6E6;
   border-radius: 4px;
   font-family: "PT Sans", sans-serif;
@@ -713,12 +769,18 @@ text-align: center;
 }
 
 .hotels-item{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: 340px;
   margin: 0;
   padding: 0;
   margin-top: 53px;
 }
 
+.hotels-item:nth-of-type(n+4){
+  margin-top: 10px;
+}
 
 /* Карточка отеля */
 
@@ -735,15 +797,15 @@ text-align: center;
 }
 
 .hotel-card-title{
-  display: block;
+  width: 300px;
   margin: 0;
   padding: 0;
   margin-top: 16px;
   margin-left: 20px;
+  margin-right: ;
 }
 
 .hotel-card-type{
-  display: inline-block;
   width: 133px;
   margin: 0;
   margin-top: 16px;
@@ -753,20 +815,20 @@ text-align: center;
 }
 
 .hotel-card-price{
-  display: inline-block;
   width: 143px;
   margin: 0;
+  margin-left: 25px;
   margin-top: 16px;
   font-size: 18px;
   line-height: 23px;
 }
 
 .hotel-card-rating{
-  display: inline-block;
   width: 160px;
   height: 37px;
   margin-top: 16px;
-  margin-left: 160px;
+  margin-left: auto;
+  margin-right: 20px;
   padding-top: 9px;
   text-align: center;
   font-size: 16px;
@@ -777,7 +839,6 @@ text-align: center;
 
 /* Кнопки на карточке */
 .about-button{
-  display: inline-block;
   width: 133px;
   height: 37px;
   margin-top: 16px;
@@ -790,9 +851,9 @@ text-align: center;
 }
 
 .favourites-button{
-  display: inline-block;
   width: 141px;
   height: 37px;
+  margin-top: 16px;
   padding-top: 9px;
   padding-bottom: 10px;
   text-align: center;

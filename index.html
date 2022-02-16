@@ -25,23 +25,23 @@
             </ul>
             <ul class="navigation-list navigation-user">
               <li class="navigation-item">
-                <a class="navigation-icon" href="#">
+                <a class="navigation-icon navigation-link" href="#">
                   <span class="visually-hidden">Поиск</span>
                 </a>
               </li>
               <li class="navigation-item">
-                <a class="navigation-icon" href="#">
+                <a class="navigation-icon navigation-link" href="#">
                   <span class="visually-hidden">Избранное</span>
                 </a>
               </li>
               <li class="navigation-item">
-                <a class="navigation-link brown-button want-button" href="#">Хочу сюда!</a>
+                <a class="navigation-link brown-button navigation-button" href="#">Хочу сюда!</a>
               </li>
             </ul>
           </nav>
         </header>
         <main class="main-container main-index">
-          <div class="main-background">
+          <div class="main-image-container">
             <h1 class="visually-hidden">Сайт о небольшом, но интересном городке - Седона</h1>
             <img class="welcome-image" src="images/welcome.svg" width="458" height="352" alt="Добро пожаловать в великолепную Седону, потому что Большой Каньон отстой">
           </div>
@@ -52,7 +52,7 @@
             <ul class="advantage-list">
               <li class=" advantage-with-image">
                 <div class="advantage-item cold-light-background">
-                  <h3 class="advantage-title-white">Настоящий городок</h3>
+                  <h3 class="advantage-title advantage-title-white">Настоящий городок</h3>
                   <p class="advantage-number">— №1 —</p>
                   <p class="advantage-description">Седона — не аттракцион для туристов, там течёт
                   своя жизнь</p>
@@ -62,16 +62,16 @@
                 </div>
                 <ul class="advantage-sublist">
                 <li class="advantage-item cold-light-12-background">
-                    <h4 class="advantage-title">Жильё</h4>
-                    <p class="advantage-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+                    <h4 class="advantage-sublist-title">Жильё</h4>
+                    <p class=" advantage-sublist-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
                   </li>
                   <li class="advantage-item white-background">
-                    <h4 class="advantage-title">Еда</h4>
-                    <p class="advantage-description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+                    <h4 class="advantage-sublist-title">Еда</h4>
+                    <p class=" advantage-sublist-description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
                   </li>
                   <li class="advantage-item cold-light-12-background">
-                    <h4 class="advantage-title">Сувениры</h4>
-                    <p class="advantage-description">Не только китайского, но и настоящего местного производства!</p>
+                    <h4 class="advantage-sublist-title">Сувениры</h4>
+                    <p class=" advantage-sublist-description">Не только китайского, но и настоящего местного производства!</p>
                   </li>
                 </ul>
               </li>
@@ -80,7 +80,7 @@
                   <img class="advantage-img" src="images/devil-bridge.jpg" width="800" height="384" alt="Мост дьявола">
                 </div>
                 <div class="advantage-item cold-light-background">
-                  <h3 class="advantage-title-white">Там есть
+                  <h3 class="advantage-title advantage-title-white">Там есть
                     мост дьявола</h3>
                     <p class="advantage-number">— №2 —</p>
                   <p class="advantage-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
@@ -162,34 +162,44 @@
       <div class="booking-modal">
 
         <h2 class="visually-hidden">Модальное окно для поиска гостиниц в Седоне</h2>
-        <p class="modal-title section-title">Поиск гостиницы в Cедоне</p>
-        <button class="close-modal" type="button"><span class="visually-hidden">Закрыть</span></button>
+
+        <div class="modal-first-row">
+          <p class="modal-title section-title">Поиск гостиницы в Cедоне</p>
+          <button class="close-modal" type="button"><span class="visually-hidden">Закрыть</span></button>
+        </div>
+
         <form  class="booking-form" action="https://echo.htmlacademy.ru/" method="post">
-          <label class="input-label">
-            Дата заезда:
-            <input class="date-input" type="text" name="entry-date" placeholder="Укажите дату" value="27 апреля 2020" required>
-          </label>
-          <p class="error-message">Мы не можем отправить вас в прошлое.</p>
-          <label class="input-label">
-            Дата выезда:
-            <input class="date-input" type="text" name="departure-date" placeholder="Укажите дату" value="1 сентября 2021" required>
-          </label>
-          <p class="info-message">На эти даты есть свободные номера. Пока есть.</p>
+          <div class="input-date-form">
+            <label class="input-label" for="entry-date">Дата заезда:</label>
+            <input class="date-input" type="text" id="entry-date" name="entry-date" placeholder="Укажите дату" required>
+            <p class="info-message error-message">Мы не можем отправить вас в прошлое.</p>
+          </div>
 
-          <label class="input-label" for="adult">Взрослые: </label>
-          <button class="minus" type="button" name="minus-button-adult">-</button>
-          <input class="customers-number" type="number" name="adult" value="2" id="adult" min="0" required>
-          <button class="plus" type="button" name="plus-button-adult">+</button>
+          <div class="input-date-form">
+            <label class="input-label" for="departure-date">Дата выезда:</label>
+            <input class="date-input" type="text" id="departure-date" name="departure-date" placeholder="Укажите дату" required>
+            <p class="info-message" >На эти даты есть свободные номера. Пока есть.</p>
+          </div>
 
-          <label class="input-label" for="children"> Дети: </label>
-            <button class="info-button" type="button" name="info-button">i</button>
-            <div class="info-small-window">
-              Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
-            </div>
-          <button class="minus" type="button" name="minus-button-children">-</button>
-          <input class="customers-number" type="number" name="children" value="1" id="children" min="0" required>
-          <button class="plus" type="button" name="plus-button-children">+</button>
+          <div class="input-customers-form">
 
+            <label class="input-label" for="adult">Взрослые: </label>
+            <button class="minus" type="button" name="minus-button-adult">-</button>
+            <input class="customers-number" type="number" name="adult" value="2" id="adult" min="0" required>
+            <button class="plus" type="button" name="plus-button-adult">+</button>
+
+            <label class="input-label input-label-children" for="children"> Дети: </label>
+
+              <button class="info-button " type="button" name="info-button">i</button>
+              <!-- Временно добавил атрибут hidden -->
+              <div class="info-small-window" hidden>
+                Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+              </div>
+
+            <button class="minus" type="button" name="minus-button-children">-</button>
+            <input class="customers-number" type="number" name="children" value="1" id="children" min="0" required>
+            <button class="plus" type="button" name="plus-button-children">+</button>
+          </div>
           <button class=" search-blue-button light-blue-button" type="submit">Найти</button>
         </form>
       </div>

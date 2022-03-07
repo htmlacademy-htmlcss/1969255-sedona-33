@@ -107,7 +107,7 @@ body{
 .navigation-link-current::after{
   position: absolute;
   content: "";
-  bottom: -1px;
+  bottom: 0;
   left: 17px;
   right: 17px;
   height: 2px;
@@ -212,10 +212,12 @@ body{
 }
 
 .main-image-container{
-  background-image: url("../images/index-background.jpg");
+  margin-top: -1px;
+  background-image: url(../images/divider.svg), url("../images/index-background.jpg");
   background-color: #83B3D3;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% auto, 100% auto;
+  background-position: bottom, top;
   padding-top: 51px;
   padding-bottom: 82px;
 }
@@ -225,7 +227,6 @@ body{
   margin-left: auto;
   margin-right: auto;
 }
-
 
 .description-title{
   margin: 0;
@@ -465,7 +466,7 @@ body{
 .subscribe-description{
   width: 720px;
   margin: 0 auto;
-  margin-top: 29px;
+  margin-top: 27px;
   padding: 0 126px;
   font-size: 22px;
   line-height: 26px;
@@ -496,17 +497,17 @@ body{
   background-color: #E6E6E6;
 }
 
+.email-input:invalid:focus{
+  background: #FFFFFF;
+  outline: 2px solid #FF5757;
+  outline-offset: -1px;
+}
+
 .email-input:focus{
   background-color: #E6E6E6;
   outline: 3px solid #83B3D3;
   outline-offset: -3px;
 }
-
-  /* .email-input:invalid{
-    background: #FFFFFF;
-    outline: 2px solid #FF5757;
-    outline-offset: -1px;
-  } */
 
 .light-blue-button:hover{
   background: #68A2CA;
@@ -535,8 +536,9 @@ body{
 /* Footer */
 .page-footer-container{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 1200px;
+  min-height: 120px;
   margin: 0 auto;
   padding: 0;
 }
@@ -544,55 +546,72 @@ body{
 /* Соц сети */
 
 .footer-social{
-  min-width: 107px;
-  margin-left: 72px;
+  width: 126px;
   text-align: center;
+  margin-left: 61px;
+  margin-top: 35px;
 }
 
 .footer-social-list{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 40px 40px 40px;
+  gap: 3px;
   margin: 0;
   padding: 0;
-  margin-top: 49px;
   list-style-type: none;
 }
 
 
-.social-icon{
+.social-link{
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 3px solid #ffffff;
+  border-radius: 10px;
   fill: #83B3D3;
 }
 
-.social-icon:hover{
+.social-link:hover{
   fill: #68A2CA;
 }
 
-.social-icon:focus{
+.social-link:focus{
   fill: #68A2CA;
-  outline: 3px solid #83B3D3;
+  border-color: #83B3D3;
+  outline: none;
 }
 
-.social-icon:active{
+.social-link:active{
   fill: #68A2CA;
   opacity: 30%;
+  border: none;
+}
+
+.social-icon{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 /* Номер телефона */
 
 .footer-contact{
-  width: 720px;
-  margin: 0 auto;
+  margin-left: 59px;
   margin-top: 40px;
   margin-bottom: 30px;
   text-align: center;
 }
 
 .footer-contact-phone{
+  width: 361px;
+  height: 70px;
+  padding: 15px;
   font-size: 40px;
   line-height: 40px;
   color: #000000;
   text-decoration: none;
+  border-radius: 10px;
 }
 
 .footer-contact-phone:hover{
@@ -602,8 +621,6 @@ body{
 .footer-contact-phone:focus{
   color: #756257;
   outline: 3px solid #83B3D3;
-  border-radius: 10px;
-  padding: 15px;
 }
 
 .footer-contact-phone:active{
@@ -611,14 +628,19 @@ body{
   opacity: 0.3;
   outline: none;
 }
+
 /* Сайт разработчика */
 
-.footer-developer{
-  width: 115px;
-  margin-top: 42px;
-  margin-bottom: 44px;
-  margin-right: 72px;
+
+.footer-developer-site{
+  display: block;
+  Width: 160px;
+  margin-top: 20px;
+  margin-right: 49.45px;
+  margin-left: 34.45px;
   text-align: center;
+  border-radius: 10px;
+  padding: 18.55px 22.55px;
 }
 
 .footer-developer-site:hover{
@@ -626,17 +648,16 @@ body{
 }
 
 .footer-developer-site:focus{
-  color: #756257;
+  fill: #756257;
   outline: 3px solid #83B3D3;
-  border-radius: 10px;
-  padding: 19px 22px;
 }
 
 .footer-developer-site:active{
-  color: #756257;
+  fill: #756257;
   opacity: 0.3;
   outline: none;
 }
+
 /* Modal window */
 
 .booking-modal{
@@ -798,6 +819,7 @@ body{
 }
 
 .filters-image-container{
+  margin-top: -1px;
   background-image: url("../images/catalog-background.jpg");
   background-color: #83B3D3;
   background-repeat: no-repeat;

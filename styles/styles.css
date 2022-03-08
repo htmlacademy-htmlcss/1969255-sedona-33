@@ -824,7 +824,7 @@ body{
   background-color: #83B3D3;
   background-repeat: no-repeat;
   background-size: 100% auto;
-  padding-top: 35px;
+  padding-top: 34px;
   padding-bottom: 83px;
   color: #ffffff;
 }
@@ -835,7 +835,7 @@ body{
   margin-left: 71px;
   margin-right: 601px;
   font-size: 60px;
-  line-height: 68px;
+  line-height: 78px;
   font-weight: 700;
 }
 
@@ -851,17 +851,40 @@ body{
 
 .breadcrumbs-link{
   display: block;
-  margin-right: 26px;
-  margin-top: 5px;
   font-family: "PT Sans", sans-serif;
   color: #ffffff;
   font-size: 16px;
   line-height: 21px;
   text-decoration: none;
 }
+.breadcrumbs-item{
+  position: relative;
+  margin-right: 26px;
+  margin-top: -4px;
+}
 
 .breadcrumbs-item:first-of-type{
   margin-left: 73px;
+}
+
+.breadcrumbs-item::after {
+  position: absolute;
+  width: 5px;
+  height: 8px;
+  top: 6px;
+  right: -15px;
+  content: "";
+  background-image: url(../images/icons/arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.breadcrumbs-item:last-child::after {
+  content: none;
+}
+
+.breadcrumbs-icon{
+  fill: #ffffff;
 }
 
 /* Фильтры */
@@ -900,6 +923,10 @@ body{
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
+}
+
+.hotels-filter-title:nth-of-type(2){
+  margin-left: 67px;
 }
 
 .checkbox{
@@ -1025,6 +1052,10 @@ body{
 
 
 /* Карточка отеля */
+.hotel-card-image-link{
+  margin: 0;
+  line-height: 0;
+}
 
 .hotel-card-image{
   margin: 20px 20px 0 20px;
@@ -1032,6 +1063,7 @@ body{
 }
 
 .hotel-card-title-link{
+  margin: 0;
   color: #000000;
   text-decoration: none;
 }
@@ -1071,6 +1103,7 @@ body{
   margin-top: 16px;
   margin-left: auto;
   margin-right: 20px;
+  margin-bottom: 20px;
   padding-top: 9px;
   text-align: center;
   font-size: 16px;
@@ -1080,6 +1113,8 @@ body{
   border: none;
   border-radius: 4px;
 }
+
+
 
 /* Кнопки на карточке */
 .about-button{
@@ -1144,6 +1179,7 @@ body{
 .pagination-container{
   display: flex;
   margin: 0;
+  padding: 0;
 }
 
 .pagination{
@@ -1151,7 +1187,9 @@ body{
   list-style-type: none;
   margin-left: 72px;
   margin-top: 30px;
+  padding: 0;
 }
+
 
 .pagination-current{
   background-color: #f2f2f2;
@@ -1208,5 +1246,17 @@ body{
 .subscribe-title{
   width: 720px;
   margin: 0 auto;
-  padding-top: 72px;
+  padding-top: 58px;
+}
+
+.subscribe-white .subscribe-description{
+  margin-top: 46px;
+}
+
+.subscribe-white .subscribe-form{
+  margin-bottom: 0;
+}
+
+.subscribe-white{
+  margin-bottom: 30px;
 }

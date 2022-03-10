@@ -56,7 +56,7 @@
                 </a>
               </li>
               <li class="breadcrumbs-item">
-                <a class="breadcrumbs-link">Гостиницы</a>
+                <a class="breadcrumbs-link" href="#">Гостиницы</a>
               </li>
             </ul>
           </header>
@@ -111,19 +111,19 @@
           <div class="sorting-container">
             <p class="sort-title section-title">Найдено гостиниц: <span class="sort-quantity">38</span></p>
 
-            <select class="sort-select" aria-label="Сортировка">
+            <select class="sort-select select-form" aria-label="Сортировка">
               <option value="cheap">Сначала дешёвые</option>
               <option value="expensive">Сначала дорогие</option>
               <option value="popular">Сначала популярные</option>
             </select>
 
-            <a class="display-mode-button" href="#">
-              <span class="visually-hidden">Показать карточки</span>
+            <a class="display-mode-button mode-tiles mode-btn-active" href="#">
+              <span class="visually-hidden">Показать плиткой</span>
             </a>
-            <a class="display-mode-button" href="#">
+            <a class="display-mode-button mode-slideshow" href="#">
               <span class="visually-hidden">Слайдшоу</span>
             </a>
-            <a class="display-mode-button" href="#">
+            <a class="display-mode-button mode-list" href="#">
               <span class="visually-hidden">Показать списком</span>
             </a>
           </div>
@@ -138,7 +138,7 @@
               <p class="hotel-card-type">Гостиница</p>
               <p class="hotel-card-price">От 4000 ₽</p>
               <a class="brown-button about-button" href="#">Подробнее</a>
-              <a class="light-blue-button white-text favourites-button" href="#">В избранное</a>
+              <a class="light-blue-button white-text favourites-button " href="#">В избранное</a>
               <span class="visually-hidden">Класс гостиницы - 4 звезды</span>
               <span class="hotel-card-rating">Рейтинг: 8,5</span>
             </li>
@@ -196,7 +196,7 @@
           <div class="pagination-container">
             <ul class="pagination">
               <li class="pagination-item">
-                <a class="pagination-link light-blue-button pagination-current ">1</a>
+                <a class="pagination-link light-blue-button pagination-current">1</a>
               </li>
               <li class="pagination-item">
                 <a class="pagination-link light-blue-button" href="#" >2</a>
@@ -216,7 +216,7 @@
             </ul>
 
             <label class="display-quantity" for="quantity">Гостиниц на странице:</label>
-              <select class="quantity-select" id="quantity" name="quantity-on-page">
+              <select class="quantity-select select-form" id="quantity" name="quantity-on-page">
                 <option value="4">4</option>
                 <option value="6">6</option>
                 <option value="9">9</option>

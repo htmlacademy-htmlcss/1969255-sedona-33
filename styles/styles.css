@@ -1232,6 +1232,28 @@ body{
   line-height: 23px;
 }
 
+.hotel-card-stars{
+  display: block;
+  width: 91px;
+  margin-top: 26px;
+  margin-left: 20px;
+}
+
+.four-stars-class{
+  background-image: url(../images/icons/four-stars.svg);
+  background-repeat: no-repeat;
+}
+
+.three-stars-class{
+  background-image: url(../images/icons/three-stars.svg);
+  background-repeat: no-repeat;
+}
+
+.two-stars-class{
+  background-image: url(../images/icons/two-stars.svg);
+  background-repeat: no-repeat;
+}
+
 .hotel-card-rating{
   width: 160px;
   min-height: 37px;

@@ -665,10 +665,24 @@ body{
 
 /* Modal window */
 
+.modal-container{
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal-container-close{
+  display: none;
+}
+
+
 .booking-modal{
   width: 715px;
-  margin: 0;
-  margin: 0 auto;
+  margin: auto;
   background-color: #ffffff;
   box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
@@ -689,7 +703,10 @@ body{
   margin-bottom: 32px;
 }
 
+/* Кнопка закрытия модального окна */
+
 .close-modal{
+  position: relative;
   width: 53px;
   height: 53px;
   padding: 0;
@@ -698,9 +715,34 @@ body{
   margin-right: 70px;
   border-radius: 50%;
   border: none;
-  background-image: url("../images/icons/close.svg");
-  background-repeat: no-repeat;
+  background-color: #F2F2F2;
 }
+
+.close-button{
+  position: absolute;
+  fill: #000000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.close-modal:hover{
+  background-color: #E6E6E6;
+}
+
+.close-modal:focus{
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;;
+}
+
+.close-modal:active{
+  outline: none;
+  background-color: #E6E6E6;
+  fill-opacity: 0.3 ;
+}
+
+
+/* Формы ввода дат */
 
 .booking-form{
   display: flex;
@@ -723,27 +765,33 @@ body{
   color: #000000;
 }
 
-.info-small-window{
-  width: 256px;
-  padding: 15px 18px 18px 22px;
-  font-size: 16px;
-  line-height: 20px;
-  color: #ffffff;
-  background-color: #333333;
-  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-}
+
 .date-input{
   width: 420px;
   height: 50px;
   padding: 0;
   margin-left: 0;
+  padding-left: 19px;
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 40px;
-  background-color: #f2f2f2;
+  background-color: #F2F2F2;
   border: none;
+  border-radius: 4px;
+}
+
+.date-input:hover{
+  background-color: #E6E6E6;
+}
+
+.date-input:focus{
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;;
+}
+.date-input:active{
+  background-color: #FFFFFF;
+  outline: 2px solid #000000;
 }
 
 .input-customers-form{
@@ -767,6 +815,8 @@ body{
   color: #ff5757;
 }
 
+/* Ввод количества проживающих */
+
 .customers-number{
   width: 57px;
   height: 50px;
@@ -777,23 +827,82 @@ body{
   font-weight: 700;
   font-size: 18px;
   line-height: 40px;
+  text-align: center;
+  background-color: #F2F2F2;
 }
+
+.customers-number:focus{
+  outline: none;
+}
+
 .input-label-children{
   width: 54px;
   margin-left: 56px;
 }
 
-.minus{
+/* Кнопки плюс и минус */
+
+.minus-button, .plus-button{
+  position: relative;
   align-self: stretch;
   width: 38px;
+  border: none;
+  background-color: #F2F2F2;
+}
+
+.minus-button{
+  border-radius: 4px 0 0 4px;
+}
+
+.plus-button{
+  border-radius: 0 4px 4px 0;
+}
+
+.minus, .plus{
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  padding: 3px;
+  fill: #000000;
+  opacity: 0.3;
+  border: 3px solid #F2F2F2;
+  border-radius: 4px;
+  top: 12px;
+}
+
+.minus{
+  left: 13px;
 }
 
 .plus{
-  align-self: stretch;
-  width: 38px;
+  right: 13px;
 }
 
-.info-button{
+.minus-button:hover>.minus, .plus-button:hover>.plus{
+  opacity: 1;
+}
+
+.minus-button:focus, .plus-button:focus{
+  outline: none;
+}
+
+.minus-button:focus>.minus, .plus-button:focus>.plus{
+  border-color: #83B3D3;
+  opacity: 1;
+  outline: none;
+}
+
+.minus-button:active>.minus, .plus-button:active>.plus{
+  opacity: 0.2;
+  border-color: #F2F2F2;
+}
+
+/* Tooltip */
+.tooltip{
+  position: relative;
+}
+
+.tooltip-button{
   align-self: center;
   width: 25px;
   height: 25px;
@@ -803,6 +912,50 @@ body{
   border: none;
   border-radius: 50%;
 }
+
+.tooltip-button:hover{
+  background-color: #68A2CA;
+}
+
+.tooltip-button:focus{
+  outline: none;
+  background-color: #68A2CA;
+}
+
+.tooltip-window{
+  position: absolute;
+  top: 40px;
+  left: -116px;
+  width: 256px;
+  padding: 15px 18px 18px 22px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #ffffff;
+  background-color: #333333;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  display: none;
+}
+
+.tooltip-window::before {
+  content:'';
+  background-image: url("../images/tooltip-arrow.svg");
+  width: 19px;
+  height: 9px;
+  position:absolute;
+  left:0;
+  right:0;
+  bottom: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tooltip-button:hover + .tooltip-window,
+.tooltip-button:focus + .tooltip-window {
+  display: block;
+}
+
 
 .search-blue-button{
   width: 575px;

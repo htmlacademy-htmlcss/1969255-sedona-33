@@ -173,7 +173,7 @@
         </footer>
       </div>
 
-      <!-- Временно скрыто -->
+      <!-- для показа окна убрать display: none; у класса modal-container-close -->
       <div class="modal-container modal-container-close">
       <div class="booking-modal">
 
@@ -190,12 +190,14 @@
           <div class="input-date-form">
             <label class="input-label" for="entry-date">Дата заезда:</label>
             <input class="date-input" type="text" id="entry-date" name="entry-date" placeholder="Укажите дату" required>
+            <!-- для показа сообщения убрать visibility: hidden у класса info-message -->
             <p class="info-message error-message">Мы не можем отправить вас в прошлое.</p>
           </div>
 
           <div class="input-date-form">
             <label class="input-label" for="departure-date">Дата выезда:</label>
             <input class="date-input" type="text" id="departure-date" name="departure-date" placeholder="Укажите дату" required>
+            <!-- для открытия убрать visibility: hidden у класса info-message -->
             <p class="info-message" >На эти даты есть свободные номера. Пока есть.</p>
           </div>
 

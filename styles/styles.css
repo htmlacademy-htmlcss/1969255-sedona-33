@@ -676,7 +676,7 @@ body{
 }
 
 .modal-container-close{
-  display: none;
+  /* display: none; */
 }
 
 
@@ -777,12 +777,18 @@ body{
   font-weight: 700;
   font-size: 18px;
   line-height: 40px;
-  background-color: #F2F2F2;
+  background-color: #FFFFFF;
+  outline: 2px solid #000000;
   border: none;
   border-radius: 4px;
   background-image: url("../images/icons/calendar.svg");
   background-repeat: no-repeat;
   background-position: right 19px center;
+}
+
+.date-input:placeholder-shown{
+  background-color: #F2F2F2;
+  outline: none;
 }
 
 .date-input:hover{
@@ -793,10 +799,7 @@ body{
   background-color: #E6E6E6;
   outline: 3px solid #83B3D3;;
 }
-.date-input:active{
-  background-color: #FFFFFF;
-  outline: 2px solid #000000;
-}
+
 
 .input-customers-form{
   display: flex;
@@ -805,17 +808,23 @@ body{
   align-items: center;
 }
 
-.info-message{
-  visibility: hidden;
+.modal-input-message{
   margin: 0;
   padding: 0;
   width: 420px;
+  min-height: 29px;
   margin-left: 225px;
   margin-bottom: 11px;
+}
+
+.success-message{
   font-size: 16px;
   line-height: 29px;
+
 }
 .error-message{
+  font-size: 16px;
+  line-height: 29px;
   color: #ff5757;
 }
 
@@ -1404,12 +1413,13 @@ opacity: 0.3;
 }
 
 .sort-title{
-  min-width: 347px;
+  min-width: 338px;
   margin: 0;
   padding: 0;
   padding-top: 7px;
   font-size: 30px;
   line-height: 39px;
+  text-align: start;
 }
 
 .select{
@@ -1423,7 +1433,9 @@ opacity: 0.3;
   height: 48px;
   margin-left: 192px;
   margin-right: 81px;
-  padding: 12px 19px;
+  padding-top: 10px;
+  padding-bottom: 11px;
+  padding-left: 17px;
   border: 2px solid #E6E6E6;
   border-radius: 4px;
   font-family: "PT Sans", sans-serif;
@@ -1463,6 +1475,10 @@ opacity: 0.3;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   margin-right: 8px;
+}
+
+.display-mode-button:last-child{
+  margin-right: 0;
 }
 
 .mode-btn-active{
@@ -1506,7 +1522,7 @@ opacity: 0.3;
 /* Карточки отелей на гридах */
 .hotels-cards-container{
   width: 1056px;
-  margin: 53px auto 30px;
+  margin: 53px auto 33px;
   padding: 0;
 }
 
@@ -1693,6 +1709,7 @@ opacity: 0.3;
 
   /* Pagination */
 .divider{
+  margin: 0;
   margin-left: 72px;
   margin-right: 72px;
   border-top: 1px solid #e6e6e6;
@@ -1778,7 +1795,9 @@ opacity: 0.3;
   height: 48px;
   margin-top: 30px;
   margin-right: 72px;
-  padding-left: 17px;
+  padding-top: 11px;
+  padding-bottom: 8px;
+  padding-left: 15px;
   border: 2px solid #E6E6E6;
   border-radius: 4px;
   font-family: "PT Sans", sans-serif;

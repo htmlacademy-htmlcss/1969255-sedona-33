@@ -27,7 +27,7 @@ html{
 }
 body{
   margin: 0;
-  min-height: 100%;
+  min-height: 1240px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -844,6 +844,12 @@ body{
   background-color: #F2F2F2;
 }
 
+.customers-number::-webkit-outer-spin-button,
+.customers-number::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
 .customers-number:focus{
   outline: none;
 }
@@ -1296,14 +1302,13 @@ opacity: 0.3;
 .range-input::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
-  -moz-appearance:textfield;
 }
 
 
 .range-scale{
   position: relative;
   height: 4px;
-  margin-top: 32px;
+  margin-top: 29px;
   background-color: rgba(255, 255, 255, 0.3)
 }
 

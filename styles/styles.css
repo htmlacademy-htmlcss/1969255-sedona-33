@@ -874,7 +874,8 @@ body {
 
 .customers-number::-webkit-outer-spin-button,
 .customers-number::-webkit-inner-spin-button {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   margin: 0;
 }
 
@@ -1339,7 +1340,8 @@ body {
 
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   margin: 0;
 }
 
@@ -1489,7 +1491,8 @@ body {
   background-image: url("../images/icons/dropdown.svg");
   background-repeat: no-repeat;
   background-position: right 21px center;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   background-color: #ffffff;
 }
 
